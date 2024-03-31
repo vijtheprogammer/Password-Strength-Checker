@@ -30,14 +30,14 @@ while (quit != "No"):
         exit()
     
     else:
-        if password_length > 4:
+        if password_length < 4:
+            score += 0
+        elif password_length > 4 and password_length < 8:
             score += 1
-        elif password_length > 8:
+        elif password_length >=8 and password_length <= 12:
             score += 2
         elif password_length > 12:
             score += 3
-        elif password_length > 16:
-            score += 4
 
         if score > 7:
             score = 7
@@ -46,9 +46,9 @@ while (quit != "No"):
 
         if score < 4:
             print("  Strength Level: Weak\n")
-        elif score >= 4 and score <= 6:
+        elif score >= 4 and score < 6:
             print("  Strength Level: Okay\n")
-        elif score > 6:
+        elif score >= 6:
             print("  Strength Level: Strong\n")
         
         time.sleep(1)
