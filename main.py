@@ -44,9 +44,9 @@ while (quit != "No"):
         
         print(f"Score: {score:d} / 7")
 
-        if score < 4:
+        if score < 5:
             print("  Strength Level: Weak\n")
-        elif score >= 4 and score < 6:
+        elif score >= 5 and score < 6:
             print("  Strength Level: Okay\n")
         elif score >= 6:
             print("  Strength Level: Strong\n")
